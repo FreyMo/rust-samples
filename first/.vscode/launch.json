@@ -10,35 +10,13 @@
             "name": "Debug executable 'first'",
             "cargo": {
                 "args": [
-                    "build",
-                    "--bin=first",
-                    "--package=first"
+                    "build"
                 ],
                 "filter": {
                     "name": "first",
                     "kind": "bin"
                 }
             },
-            "args": [],
-            "cwd": "${workspaceFolder}"
-        },
-        {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Debug unit tests in executable 'first'",
-            "cargo": {
-                "args": [
-                    "test",
-                    "--no-run",
-                    "--bin=first",
-                    "--package=first"
-                ],
-                "filter": {
-                    "name": "first",
-                    "kind": "bin"
-                }
-            },
-            "args": [],
             "cwd": "${workspaceFolder}"
         }
     ]
