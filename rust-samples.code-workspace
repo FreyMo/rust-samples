@@ -6,6 +6,9 @@
         },
         {
             "path": "first"
+        },
+        {
+            "path": "guessing-game"
         }
     ],
     "settings": {}
