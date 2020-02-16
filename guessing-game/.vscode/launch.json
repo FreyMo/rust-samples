@@ -12,10 +12,13 @@
                 "args": [
                     "build"
                 ],
-                "filter": {
-                    "name": "guessing-game",
-                    "kind": "bin"
-                }
+                // "filter": {
+                //     "name": "guessing-game",
+                //     "kind": "bin"
+                // }
+            },
+            "env": {
+                "RUST_BACKTRACE": "full",
             },
             "cwd": "${workspaceFolder}"
         }
