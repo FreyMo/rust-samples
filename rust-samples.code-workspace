@@ -9,6 +9,9 @@
         },
         {
             "path": "guessing-game"
+        },
+        {
+            "path": "concepts"
         }
     ],
     "settings": {}
