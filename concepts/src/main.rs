@@ -10,7 +10,7 @@ mod my_module {
     pub struct MyStruct {
         day: Day,
         night: Day,
-        cool: Day
+        cool: Day,
     }
 
     impl MyStruct {
@@ -20,11 +20,7 @@ mod my_module {
         }
 
         pub fn new(day: Day, night: Day, cool: Day) -> MyStruct {
-            MyStruct {
-                day,
-                night,
-                cool
-            }
+            MyStruct { day, night, cool }
         }
     }
 }
@@ -42,9 +38,10 @@ fn main() {
     let another = 123;
 
     let my_struct = MyStruct::new(
-        Day::Monday {test, another},
+        Day::Monday { test, another },
         Day::Tuesday(),
-        Day::Wednesday(String::from(string)));
+        Day::Wednesday(String::from(string)),
+    );
 
     let tup: (u32, u32, u128) = (500, 500, 10000012387455);
     let (_a, _b, _c) = tup;
@@ -68,9 +65,7 @@ fn allocate_on_stack() {
 }
 
 fn allocate_on_heap() {
-    
-    let mut _vec: Vec::<i32> = Vec::new();
-    
+    let mut _vec: Vec<i32> = Vec::new();
     for i in 0..1000000 {
         _vec.push(i);
     }
@@ -78,7 +73,7 @@ fn allocate_on_heap() {
     let mut input = String::new();
     match std::io::stdin().read_line(&mut input) {
         Ok(x) => println!("{}", x),
-        Err(_) => println!() 
+        Err(_) => println!(),
     }
 
     println!("You typed: {}", input.trim());
