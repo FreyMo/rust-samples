@@ -12,6 +12,9 @@
         },
         {
             "path": "concepts"
+        },
+        {
+            "path": "other-stuff"
         }
     ],
     "settings": {}
