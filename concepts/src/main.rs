@@ -54,6 +54,11 @@ fn main() {
 
     allocate_on_stack();
     allocate_on_heap();
+
+    match maybe() {
+        Some(value) => println!("{}", value),
+        None => {}
+    }
 }
 
 fn allocate_on_stack() {
@@ -98,4 +103,12 @@ fn get_slice(string: &str) -> &str {
     }
 
     &string[0..string.len()]
+}
+
+fn maybe() -> Option<u32> {
+    if true {
+        return Some(55);
+    }
+
+    None
 }
