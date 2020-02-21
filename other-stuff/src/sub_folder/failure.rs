@@ -30,7 +30,13 @@ fn cause_failure() -> Result<u32, String> {
     // Only works on types that implement std::ops:Try
     let i = might_fail(22)?;
     println!("{}", i);
-    
+
+    // Converts an Option to a Result
+    match Some(3).ok_or(String::from("this can never happen")) {
+        Ok(_) => {}
+        Err(_) => {}
+    }
+
     Ok(0)
 }
 
